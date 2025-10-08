@@ -1,0 +1,48 @@
+services:
+  login_service:
+    build: ./backend/login
+    container_name: login
+    ports:
+      - "8000:8000"
+    environment:
+      DEBUG: 1
+      ALLOWED_HOSTS: "*"
+      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+
+  faceshape_service:
+    build: ./backend/faceshapefinder
+    container_name: faceshapefinder
+    ports:
+      - "8001:8000"
+    environment:
+      DEBUG: 1
+      ALLOWED_HOSTS: "*"
+      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+
+  aichat_service:
+    build: ./backend/ai_chat
+    container_name: ai_chat
+    ports:
+      - "8002:8000"
+    environment:
+      DEBUG: 1
+      ALLOWED_HOSTS: "*"
+      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+
+  skintone_service:
+    build: ./backend/skin_tone_backend
+    container_name: skin_tone_backend
+    ports:
+      - "8003:8000"
+    environment:
+      DEBUG: 1
+      ALLOWED_HOSTS: "*"
+      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+
+  frontend:
+    build: ./glamaura
+    container_name: glam_frontend
+    ports:
+      - "5173:5173"
+    stdin_open: true
+    tty: true
