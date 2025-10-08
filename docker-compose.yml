@@ -7,7 +7,7 @@ services:
     environment:
       DEBUG: 1
       ALLOWED_HOSTS: "*"
-      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+      GOOGLE_API_KEY: "your API KEY"
 
   faceshape_service:
     build: ./backend/faceshapefinder
@@ -17,7 +17,7 @@ services:
     environment:
       DEBUG: 1
       ALLOWED_HOSTS: "*"
-      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+      GOOGLE_API_KEY: "YOUR API KEY"
 
   aichat_service:
     build: ./backend/ai_chat
@@ -27,7 +27,7 @@ services:
     environment:
       DEBUG: 1
       ALLOWED_HOSTS: "*"
-      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+      GOOGLE_API_KEY: "YOUR API KEY"
 
   skintone_service:
     build: ./backend/skin_tone_backend
@@ -37,7 +37,7 @@ services:
     environment:
       DEBUG: 1
       ALLOWED_HOSTS: "*"
-      GOOGLE_API_KEY: "AIzaSyCyLIP0M-FNNvmjDGwCLtxm0SsGsrlejAM"
+      GOOGLE_API_KEY: "YOUR API KEY"
 
   frontend:
     build: ./glamaura
@@ -46,3 +46,4 @@ services:
       - "5173:5173"
     stdin_open: true
     tty: true
+
